@@ -1,4 +1,4 @@
-# Single Omnidirectional Image Depth Estimation
+# Depth Estimation for a Single Omnidirectional Image with Reversed-gradient Warming-up Thresholds Discriminator
 
 This is for ICASSP submission
 
