@@ -62,7 +62,7 @@ python train_DA_RWTD.py --bs 16 --epochs 100 --comments your_comments
 ```
 
 
-### Appendix
+## Appendix
 
 <table align="center" style="width:100%; border:#000 solid; border-width:1px 0">
 <caption>Table 1: Overfitted model</caption>
