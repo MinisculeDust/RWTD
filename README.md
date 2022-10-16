@@ -61,6 +61,44 @@ The default parameters have been set except:
 python train_DA_RWTD.py --bs 16 --epochs 100 --comments your_comments
 ```
 
+
+### Appendix
+
+<table align="center" style="width:100%; border:#000 solid; border-width:1px 0">
+<caption>Table 1: Overfitted model</caption>
+<thead style="border-bottom:#000 1px solid;">
+<tr>
+<th style="border:0">Testing Dataset</th>
+<td style="border:0">a1</td>
+<td style="border:0">a2</td>
+<td style="border:0">a3</td>
+<td style="border:0">rel</td>
+<td style="border:0">rms</td>
+<td style="border:0">log10</td>
+</tr>
+</thead>
+<tr>
+<th style="border:0">SUNCG Training</th>
+<td style="border:0">0.9868</td>
+<td style="border:0">0.9976</td>
+<td style="border:0">0.9993</td>
+<td style="border:0">0.0344</td>
+<td style="border:0">0.2316</td>
+<td style="border:0">0.0150</td>
+</tr>
+<tr>
+<th style="border:0">SUNCG Testing</th>
+<td style="border:0">0.9451</td>
+<td style="border:0">0.9844</td>
+<td style="border:0">0.9949</td>
+<td style="border:0">0.0547</td>
+<td style="border:0">0.3705</td>
+<td style="border:0">0.0244</td>
+</table>
+
+For example, RectNet was trained with SUNCG training dataset and tested with SUNCG training and testing datasets, respectively. The result of it with LR=0.0001 and a1=0.3651 for the real-world dataset is shown in Table 1. 
+
+
 ## Notice
 
 The encoder-decoder framework is based on 
