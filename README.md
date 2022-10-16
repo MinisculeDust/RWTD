@@ -102,9 +102,7 @@ python train_DA_RWTD.py --bs 16 --epochs 100 --comments your_comments
 For example, RectNet was trained with SUNCG training dataset and tested with SUNCG training and testing datasets, respectively. The result of it with LR=0.0001 and a1=0.3651 for the real-world dataset is shown in Table 1. 
 
 
-## Notice
-
-The encoder-decoder framework is based on 
+## Reference
 
 ```
 @article{alhashim2018high,
@@ -112,5 +110,13 @@ The encoder-decoder framework is based on
 	author={Alhashim, Ibraheem and Wonka, Peter},
 	journal={arXiv preprint arXiv:1812.11941},
 	year={2018}
+}
+
+@inproceedings{bhat2021adabins,
+  title={Adabins: Depth estimation using adaptive bins},
+  author={Bhat, Shariq Farooq and Alhashim, Ibraheem and Wonka, Peter},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={4009--4018},
+  year={2021}
 }
 ```
