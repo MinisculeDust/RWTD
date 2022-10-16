@@ -106,10 +106,10 @@ For example, RectNet was trained with SUNCG training dataset and tested with SUN
 
 ```
 @article{alhashim2018high,
-	title={High quality monocular depth estimation via transfer learning},
-	author={Alhashim, Ibraheem and Wonka, Peter},
-	journal={arXiv preprint arXiv:1812.11941},
-	year={2018}
+  title={High quality monocular depth estimation via transfer learning},
+  author={Alhashim, Ibraheem and Wonka, Peter},
+  journal={arXiv preprint arXiv:1812.11941},
+  year={2018}
 }
 
 @inproceedings{bhat2021adabins,
