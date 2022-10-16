@@ -66,6 +66,7 @@ python train_DA_RWTD.py --bs 16 --epochs 100 --comments your_comments
 
 <table align="center" style="width:100%; border:#000 solid; border-width:1px 0">
 <caption>Table 1: Overfitted model</caption>
+	
 <thead style="border-bottom:#000 1px solid;">
 <tr>
 <th style="border:0">Testing Dataset</th>
