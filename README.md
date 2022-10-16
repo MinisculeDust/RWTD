@@ -45,7 +45,7 @@ The figure above shows real-world images captured in a building with an off-the-
 Check https://pytorch.org/ and choose a suitable version of PyTorch for your computers/servers
 
 ```
-pip install opencv-contrib-python
+pip install opencv-contrib-python pytorch3d
 ```
 
 ## Train
