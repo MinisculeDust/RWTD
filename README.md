@@ -33,6 +33,18 @@ Figure above shows sampled scenes of the SunCG dataset. They illustrate RGB imag
 However, there are some differences between these CG and real-world scenes, including the textures and colours of the scenes. Figure above shows the real-world scenes from the Stanford2D3D dataset, which are taken in different buildings. It also includes many images, but they are from very limited kinds of scenes. 
 
 
+## Loss Function
+The loss function combines the dense depth loss, the ChamferLoss, and Domain Label Loss (DLL) (Equation \ref{f1}). $\alpha$  and $\beta$  represent the factor of dense depth and ChamferLoss, respectively. $\delta$ represents Domain Label Loss Factor (DLLF). It controls the increased speed of DLL. These factors balance the weight of different losses and lead to the good performance of the proposed architecture. 
+
+### Dense Loss 
+We use a Scale-invariant (SI) Loss for the dense depth loss function. In contrast to the square variance error, which usually measures the difference between two images, SI Loss does not depend on the scale of the images. 
+	
+### Chamfer Loss
+In order to shrink the gap between bin centre and ground truth depth values, we use the Chamfer loss function, which uses bi-directional chamfering losses as a regularised item. This loss can make the bin centres to be close to the depth values of ground truths while making the rest to be far from these depth values. 
+
+### Domain Label Losses
+See Sec 3.2.1 
+
 ## Performance on New Dataset
 
 ![image](Materials/depth_comparison.png)
@@ -63,6 +75,86 @@ python train_DA_RWTD.py --bs 16 --epochs 100 --comments your_comments
 
 
 ## Appendix
+
+<table align="center" style="width:100%; border:#000 solid; border-width:1px 0">
+<caption>Table: Effect of discriminator</caption>
+	
+<thead style="border-bottom:#000 1px solid;">
+<tr>
+<th style="border:0">Model</th>
+<td style="border:0">a1</td>
+<td style="border:0">a2</td>
+<td style="border:0">a3</td>
+<td style="border:0">rel</td>
+<td style="border:0">rms</td>
+<td style="border:0">log10</td>
+</tr>
+</thead>
+<tr>
+<th style="border:0">Unsupervised DA [7]</th>
+<td style="border:0">26.2</td>
+<td style="border:0">50.7</td>
+<td style="border:0">68.1</td>
+<td style="border:0">0.855</td>
+<td style="border:0">1.720</td>
+<td style="border:0">0.235</td>
+</tr>
+<tr>
+<th style="border:0">RWTD (Ours)</th>
+<td style="border:0">74.08±2.37</td>
+<td style="border:0">95.81±0.63</td>
+<td style="border:0">99.21±0.2</td>
+<td style="border:0">0.18±0.009</td>
+<td style="border:0">0.543±0.042</td>
+<td style="border:0">0.069±0.003</td>
+</table>
+
+
+
+<table align="center" style="width:100%; border:#000 solid; border-width:1px 0">
+<caption>Table: Investigation on the effect of each component in the proposed architecture</caption>
+	
+<thead style="border-bottom:#000 1px solid;">
+<tr>
+<th style="border:0">Model</th>
+<td style="border:0">a1</td>
+<td style="border:0">a2</td>
+<td style="border:0">a3</td>
+<td style="border:0">rel</td>
+<td style="border:0">rms</td>
+<td style="border:0">log10</td>
+</tr>
+</thead>
+<tr>
+<th style="border:0">Encoder-decoder model only</th>
+<td style="border:0">65.15±4.05</td>
+<td style="border:0">91.13±1.59</td>
+<td style="border:0">97.71±0.53</td>
+<td style="border:0">0.24±0.025</td>
+<td style="border:0">0.683±0.055</td>
+<td style="border:0">0.087±0.008</td>
+</tr>
+<tr>
+<th style="border:0">with RD</th>
+<td style="border:0">69.68±5.43</td>
+<td style="border:0">94.57±1.95</td>
+<td style="border:0">99.03±0.4</td>
+<td style="border:0">0.199±0.025</td>
+<td style="border:0">0.565±0.068</td>
+<td style="border:0">0.075±0.008</td>
+</tr>
+<tr>
+<th style="border:0">with RWTD (Ours) </th>
+<td style="border:0">74.08±2.37 </td>
+<td style="border:0">95.81±0.63</td>
+<td style="border:0">99.21±0.2</td>
+<td style="border:0">0.18±0.009</td>
+<td style="border:0">0.543±0.042</td>
+<td style="border:0">0.069±0.003</td>
+</table>
+
+
+
 
 <table align="center" style="width:100%; border:#000 solid; border-width:1px 0">
 <caption>Table 1: Overfitted model</caption>
