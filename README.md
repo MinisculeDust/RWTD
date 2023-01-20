@@ -77,7 +77,7 @@ python train_DA_RWTD.py --bs 16 --epochs 100 --comments your_comments
 ## Appendix
 
 <table align="center" style="width:100%; border:#000 solid; border-width:1px 0">
-<caption>Table: Effect of discriminator</caption>
+<caption>Table 2: Effect of discriminator</caption>
 	
 <thead style="border-bottom:#000 1px solid;">
 <tr>
@@ -112,7 +112,7 @@ python train_DA_RWTD.py --bs 16 --epochs 100 --comments your_comments
 
 
 <table align="center" style="width:100%; border:#000 solid; border-width:1px 0">
-<caption>Table: Investigation on the effect of each component in the proposed architecture</caption>
+<caption>Table 3: Investigation on the effect of each component in the proposed architecture</caption>
 	
 <thead style="border-bottom:#000 1px solid;">
 <tr>
@@ -157,7 +157,7 @@ python train_DA_RWTD.py --bs 16 --epochs 100 --comments your_comments
 
 
 <table align="center" style="width:100%; border:#000 solid; border-width:1px 0">
-<caption>Table 1: Overfitted model</caption>
+<caption>Table: Overfitted model</caption>
 	
 <thead style="border-bottom:#000 1px solid;">
 <tr>
